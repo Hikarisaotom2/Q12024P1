@@ -20,9 +20,12 @@ public class Clase_24012024 {
         System.out.println("Bienvenido/a al programa");
         System.out.println("1) Edad ");
         System.out.println("2) Contraseña");
+        System.out.println("3) Notas");
         System.out.println("Ingrese la opción del menú a la que quiere ingresar: ");
         int op = entrada.nextInt();
-        if (op == 1) {//Verdadero
+
+        if (op == 1) {
+            System.out.println("Ejercicio de la edad ");
             System.out.println("Ingrese su edad ");
             int edad = entrada.nextInt();
             System.out.println("La edad es " + edad);
@@ -34,7 +37,8 @@ public class Clase_24012024 {
             if (edad < 17) { //Menor de edad
                 System.out.println("Usted es menor de edad ");
             }//Fin del if
-        } else {//false 
+        } else if (op == 2) {
+            System.out.println("Ejercicio Contraseña");
             //IF-ELSE
             /*
         valide si una contraseña numerica que sera ingresada por el usuario es la misma contrasena del sistema 
@@ -48,53 +52,72 @@ public class Clase_24012024 {
             } else {//False 
                 System.out.println("Contrasena incorrecta, intentelo de nuevo ");
             }//fin del if else 
-
-        }//fin del if else 
-
-        /*
-        valores menores a 50: Deficiente : nota < 50
-        50-59 mal 
-        60-69 bien 
-        70-79 muy bien 
-        80-89 excelente 
-        90-100 Sobre 
-         */
-        System.out.println("Ingrese la nota: ");
-        int nota = entrada.nextInt();
-        if (nota < 50) {// Verdadero 
-            //-infinito, 49
-            System.out.println("Deficiente");
-        } else {//False
-            //Si estoy aqui, es por que nota tiene un valor mayor a 50...
-            if (nota >= 50 && nota <= 59) {//Verdadero...
-                //50....59
-                System.out.println("Mal :( ");
+        } else if (op == 3) {
+            System.out.println("Ejercicio Notas");
+            /*
+                valores menores a 50: Deficiente : nota < 50
+                50-59 mal 
+                60-69 bien 
+                70-79 muy bien 
+                80-89 excelente 
+                90-100 Sobre 
+             */
+            System.out.println("Ingrese la nota: ");
+            int nota = entrada.nextInt();
+            if (nota < 50) {
+                System.out.println("Deficiente");
+            } else if (nota >= 50 && nota <= 59) {
+                System.out.println("Mal");
+            } else if (nota >= 60 && nota <= 69) {
+                System.out.println("Bien");
+            } else if (nota >= 70 && nota <= 79) {
+                System.out.println("Muy bien");
+            } else if (nota >= 80 && nota <= 89) {
+                System.out.println("Excelente");
+            } else if (nota >= 90 && nota <= 100) {
+                System.out.println("Sob");
             } else {
-                //Si estoy aqui, es por que la nota tiene un valor mayor a 59
-                if (nota >= 60 && nota <= 69) {
-                    System.out.println("Bien");
-                } else {
-                    //Si estoy aqui, es por que la nota tiene un valor mayor a 69
-                    if (nota >= 70 && nota <= 79) {
-                        System.out.println("Muy bien :)");
-                    } else {
-                        //Si estoy aqui, es por que la nota tiene un valor mayor a 79
-                        if (nota >= 80 && nota <= 89) {
-                            System.out.println("Excelente");
-                        } else {
-                            //Si estoy aqui, es por que la nota tiene un valor mayor a 89
-                            if (nota >= 90 && nota <= 100) {
-                                System.out.println("Sob");
-                            } else {
-                                System.out.println("No es una nota valida");
-                            }
-                        }
-                    }
-                }
+                System.out.println("Error en los datos, nota no valida.");
             }
-
+        } else {
+            System.out.println("Opcion no valida");
         }
 
+//        if (nota < 50) {// Verdadero 
+//            //-infinito, 49
+//            System.out.println("Deficiente");
+//        } else {//False
+//            //Si estoy aqui, es por que nota tiene un valor mayor a 50...
+//           
+//            if (nota >= 50 && nota <= 59) {//Verdadero...
+//                //50....59
+//                System.out.println("Mal :( ");
+//            } else {
+//                //Si estoy aqui, es por que la nota tiene un valor mayor a 59
+//                if (nota >= 60 && nota <= 69) {
+//                    //60..69
+//                    System.out.println("Bien");
+//                } else {
+//                    //Si estoy aqui, es por que la nota tiene un valor mayor a 69
+//                    if (nota >= 70 && nota <= 79) {
+//                        System.out.println("Muy bien :)");
+//                    } else {
+//                        //Si estoy aqui, es por que la nota tiene un valor mayor a 79
+//                        if (nota >= 80 && nota <= 89) {
+//                            System.out.println("Excelente");
+//                        } else {
+//                            //Si estoy aqui, es por que la nota tiene un valor mayor a 89
+//                            if (nota >= 90 && nota <= 100) {
+//                                System.out.println("Sob");
+//                            } else {
+//                                System.out.println("No es una nota valida");
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//
+//        }
     }//fin del main 
 
 }//fin de la clase 
