@@ -83,8 +83,6 @@ public class Clase_30012024 {
 //             double resp = numerador / denominador;
 //        System.out.println("El resultado es: "+resp);
 //        }
-
-
 //      switch (valor) {
 //            case 1: {
 //                System.out.println("Ejercicio 1");
@@ -102,27 +100,54 @@ public class Clase_30012024 {
 //                System.out.println("Opcion no valida");
 //            }
 //        }
-      
-        System.out.println("Ingrese un valor ");
-        Scanner entrada = new Scanner(System.in);
-        int valor = entrada.nextInt();
-        //1,2,3
-        switch (valor) {
-            case 1-> {
-                System.out.println("Ejercicio 1");
+//        System.out.println("Ingrese un valor ");
+//        Scanner entrada = new Scanner(System.in);
+//        int valor = entrada.nextInt();
+//        //1,2,3
+//        switch (valor) {
+//            case 1 -> {
+//                System.out.println("Ejercicio 1");
+//            }
+//            case 2 -> {
+//                System.out.println("Ejercicio 2");
+//            }
+//            case 3 -> {
+//                System.out.println("Saliendo del programa...");
+//            }
+//            default -> {
+//                System.out.println("Opcion no valida");
+//            }
+//        }
+
+        char letra = '@';
+
+        switch (letra) {
+            //Vocales
+            case 'a':
+            case 'e': 
+            case 'i': 
+            case 'o': 
+            case 'u': {
+                 System.out.println("Es una vocal");
+                break;
             }
-            case 2 ->  {
-                System.out.println("Ejercicio 2");
+            case 'b':
+            case 'c':
+                {
+                 System.out.println("No es una vocal");
+                break;
             }
-            case 3 ->  {
-                System.out.println("Saliendo del programa...");
-            }
-            default -> {
-                System.out.println("Opcion no valida");
-            }
+            //....
+            default:
+                System.out.println("Es un simbolo o un número");
         }
+
+        /*
+        Caracter 
+        Vocal 
+        connn
         
-        
+         */
     }//main
 
 }//clase 
