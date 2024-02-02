@@ -24,6 +24,9 @@ public class Clase_31012024_strings {
             System.out.println("4) Length de una cadena ");
             System.out.println("5) Mayusculas y minusculas");
             System.out.println("6) CharAt");
+            System.out.println("7) Index of ");
+            System.out.println("8) Substring");
+            System.out.println("9) Replace");
             System.out.println("Salir");
             int op = entrada.nextInt();
             entrada.nextLine();
@@ -109,13 +112,57 @@ public class Clase_31012024_strings {
                     System.out.println("Chart At");
                     System.out.println("Ingrese una cadena: ");
                     String cadena = entrada.nextLine();
-                    //Pez 
-                    // 0..2
-                    //0,1,2
                     int ultimaPos = cadena.length()-1;
                     System.out.println("Lo que hay en la pos 0 es "+ cadena.charAt(0));
-                    System.out.println("Lo que hay en la pos "+ultimaPos+" es "+ cadena.charAt(ultimaPos));
+                    System.out.println("Lo que hay en la pos "+ultimaPos+" es "+ cadena.charAt(ultimaPos));   
+                }
+                case 7 ->{
+                    System.out.println("Index Of: ");
+                    System.out.println("Ingrese una palabra: ");
+                    String cadena = entrada.nextLine();
+                    //Lectura de caracteres en java 
+                    System.out.println("Ingrese un caracter: ");
+                    char arroba= entrada.nextLine().charAt(0);
+                    int pos= cadena.indexOf(arroba);
+                    if(pos>=0){
+                        System.out.println("Se encontro el caracter en la pos "+ pos);
+                    }else{
+                        System.out.println("No se encontro el caracter en la cadena");
+                    }
                     
+                }
+                case 8->{
+                    System.out.println("Subsstring");
+                    System.out.println("Ingrese una cadena: ");
+                    String cadena = entrada.nextLine();
+                    // C l a u d i a tamaño de 7 
+                    // 0 1 2 3 4 5 6  7
+                    String subCadena1 = cadena.substring(1,3);
+                    System.out.println("La subcadena1 es "+subCadena1 );
+                    String subCadena2 = cadena.substring(1,4);
+                    System.out.println("La subcadena es "+ subCadena2);
+                    int tamano= cadena.length();
+                    String subCadena3 = cadena.substring(1,tamano+1);
+                    System.out.println("La subcadena 3 es "+subCadena3);
+                }
+                case 9->{
+                     System.out.println("Replace");
+                    System.out.println("Ingrese una cadena: ");
+                    String cadena = entrada.nextLine();
+                   String nuevaCadenaReplace=  cadena.replace('a','b' );
+                    System.out.println("La cadena original: "+cadena);
+                    System.out.println("La cadena con el replace "+ nuevaCadenaReplace);
+                    System.out.println("Ingrese una cadena con muchos espacios");
+                    String nuevaCadenaConEspacios = entrada.nextLine();
+                    String cadenaSinEspacios = nuevaCadenaConEspacios.replace(" ", "");
+                    cadenaSinEspacios = cadenaSinEspacios.replace("a", "");
+                    System.out.println("Asi se ve la cadena sin espacio: "+cadenaSinEspacios);
+                    
+                    
+                    System.out.println("Ingrese otra cadena ");
+                    String cadenaReplacePlaabra = entrada.nextLine();
+                    String cadenareplacepalabra2= cadenaReplacePlaabra.replace("hola","adios");
+                    System.out.println("L acadena con el string cambiado es "+cadenareplacepalabra2);
                 }
                 default ->{
                   continuar= false;
