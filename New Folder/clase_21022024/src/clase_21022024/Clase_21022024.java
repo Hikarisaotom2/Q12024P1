@@ -116,7 +116,7 @@ public class Clase_21022024 {
         }// fin del while
     }
 
-        public static String[] AgregarLibrosAutomaticamenteConContadorGlobal(String[] biblioteca) {
+    public static String[] AgregarLibrosAutomaticamenteConContadorGlobal(String[] biblioteca) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("El libro se agregara en la pos: " + contadorGlobal);
         System.out.println("Ingrese el nombre del libro: ");
