@@ -28,7 +28,7 @@ public class Clase_11032024 {
 //         // Recorer un ArrayList.
          for (int i = 0; i < arrayListNombres.size(); i++) {
             // listaNombres[i]
-            String elemento = arrayListNombres.get(i);
+            String elemento = arrayListNombres.get(i);// arraeglo[i]
              System.out.println("El elemento en la pos "+i+ " es "+elemento);
         }
          System.out.println(arrayListNombres);
@@ -41,7 +41,12 @@ public class Clase_11032024 {
          
          arrayListNombres.remove(1);
           System.out.println("ArrayList despues del remove "+arrayListNombres);
-
+/*
+          0 juan
+          1 gabriel
+          2 miguel
+          3  diego
+          */
           arrayListNombres.clear();
           System.out.println("Tamano despues del clear: "+ arrayListNombres.size());
           
